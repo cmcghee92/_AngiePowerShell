@@ -56,8 +56,9 @@ function Test-Network {
     }
 }
 
-function Pause-Script {
+function Read-Host {
     Read-Host "Press Enter to return to the menu"
+    
 }
 
 do {
@@ -67,30 +68,30 @@ do {
     switch ($choice) {
         "1" {
             Show-IPInfo
-            Pause-Script
+            Read-Host
         }
         "2" {
             Show-DiskSpace
-            Pause-Script
+            Read-Host
         }
         "3" {
             Show-StoppedServices
-            Pause-Script
+            Read-Host
         }
         "4" {
             Show-RecentErrors
-            Pause-Script
+            Read-Host
         }
         "5" {
             Test-Network
-            Pause-Script
+            Read-Host
         }
         "6" {
             Write-Host "Exiting Help Desk Tool..." -ForegroundColor Magenta
         }
         default {
             Write-Host "Invalid choice. Please select 1 through 6." -ForegroundColor Red
-            Pause-Script
+            Read-Host
         }
     }
 
